@@ -1,0 +1,25 @@
+/* Header Styles */
+
+
+ul {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+
+    margin: 0;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+li {
+    list-style: none;
+}
+.a-header {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+/* Footer Styles */
