@@ -20,6 +20,20 @@ li {
     text-decoration: none;
     color: white;
     font-size: large;
+    background-color: transparent;
+    border: transparent 2px solid;
+}
+
+.a-header:hover {
+    color: white;
+    background-color: transparent;
+    border: white 2px solid;
 }
 
 /* Footer Styles */
+footer > p {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
