@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -35,13 +39,36 @@
         <a href="">More about me &#8594</a>
       </div>
     </section>
+    <section id="projects">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-root"><div class="img-cont">
+              <img src="img/projects/minecraft-server.jpg" alt="Minecraft Server">
+
+            </div></div>
+          </div>
+          <div class="swiper-slide"><h2>Projekt 2</h2></div>
+          <div class="swiper-slide"><h2>Projekt 3</h2></div>
+          <div class="swiper-slide"><h2>Projekt 4</h2></div>
+          <div class="swiper-slide"><h2>Projekt 5</h2></div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
+    </section>
+    <section id="contact-me">
+
+    </section>
   </main>
   <footer>
     <p>&copy; 2025 Jan Amrhein. All rights reserved.</p>
   </footer>
 
 
-
+  <script src="index.js"></script>
 
   <script type="module">
     // Import the functions you need from the SDKs you need
