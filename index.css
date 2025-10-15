@@ -52,23 +52,57 @@ img {
 #projects {
     min-height: 400px;
     background-color: rgb(236, 218, 177);
-}
-.swiper {
-    min-height: 400px;
-
-}
-.swiper-wrapper {
-    height: 400px;
-}
-.swiper-root {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
 }
-.img-cont {
-    border: 5px solid black;
+.swiper {
+    padding: 40px 0;
+}
+.swiper-slide {
+    background: white;
     border-radius: 20px;
-    height: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    width: 250px; /* damit Swiper auto-berechnet */
+}
+.swiper-slide:hover {
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+.project-img {
+    border-radius: 20px;
+    height: 180px;
+    width: 320px;
+    margin: 20px;
+}
+.swiper-text {
+    margin-right: 20px;
+}
+
+#contact-me {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-contact {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    cursor: pointer;
+}
+#main-contact:hover {
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+#contact-text {
+    max-width: 500px;
+    margin-left: 50px;
+}
+#contact-img {
     width: 300px;
+    height: 300px;
+    border-radius: 20px;
 }

@@ -19,3 +19,25 @@ a:hover {
     color: black;
     border: black 2px solid;
 }
+
+.swiper .swiper-button-next .swiper-navigation-icon,
+.swiper .swiper-button-prev .swiper-navigation-icon {
+    color: white;
+    height: 50%;
+    width: 50%;
+}
+.swiper .swiper-button-next:hover .swiper-navigation-icon,
+.swiper .swiper-button-prev:hover .swiper-navigation-icon {
+    color: black;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    background: black;
+    border-radius: 999px;
+    border: transparent 2px solid;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    background: white;
+    border-radius: 999px;
+    border: black 2px solid;
+}
