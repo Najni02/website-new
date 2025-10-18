@@ -24,8 +24,10 @@ video {
     width: 100%;
 }
 .s-link {
-    filter: blur(3px);
     margin: 0;
+}
+.blr-link {
+    filter: blur(3px);
     user-select: none;
 }
 .box {

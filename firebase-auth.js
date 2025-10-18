@@ -41,6 +41,7 @@ loginBtn.addEventListener("click", () => {
       const user = userCredential.user;
       console.log("Angemeldet als:", user.email);
       alert(`Willkommen ${user.email}`);
+      location.href = "index.html";
     })
     .catch(error => {
       alert("Fehler: " + error.message);
@@ -55,20 +56,34 @@ loginBtn.addEventListener("click", () => {
 //   });
 // });
 
-// 👀 Auth-State überwachen
+// 🔄 Auth-Status überwachen
+const authLink = document.getElementById('auth-link');
 onAuthStateChanged(auth, user => {
-  if (user) {
-    console.log("✅ Angemeldet:", user.email);
-  } else {
-    console.log("🚫 Kein Benutzer angemeldet");
-  }
-});
+    if (user) {
+      // angemeldet: Link zu Account, optional Anzeige von Name/Avatar
+      console.log("✅ Angemeldet:", user.email);
+      authLink.textContent = 'Logout';
+      // authLink.href = '/account';
+      // authLink.insertAdjacentHTML('afterend', '<button id="signout-btn">Abmelden</button>');
+      document.getElementById('auth-link')?.addEventListener('click', () => signOut(auth));
+    } else {
+      // nicht angemeldet: Login
+      console.log("🚫 Kein Benutzer angemeldet");
+      authLink.textContent = 'Login';
+      // authLink.href = '/login';
+      // entferne ggf. Signout-Button/Avatar
+    }
+  });
 
 // optionales UI-Element für Fehlermeldungen (kein Fehler, wenn nicht vorhanden)
 const errorMessageEl = document.getElementById('error-message') || { textContent: '' };
 
 (async () => {
   try {
+    if (!auth.currentUser) {
+      errorMessageEl.textContent = 'Bitte zuerst anmelden.';
+      return;
+    }
     const docRef = doc(db, 'secure_links', 'auth-req_links');
     const snap = await getDoc(docRef);
     if (snap.exists()) {
