@@ -29,3 +29,21 @@
   }
   });
 
+// Definiere den Schwellenwert in Pixeln
+const SCROLL_THRESHOLD = 550;
+
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', function() {
+  // Hole die aktuelle vertikale Scroll-Position
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > SCROLL_THRESHOLD) {
+    // Wenn man unterhalb des Schwellenwerts ist (weiter unten auf der Seite)
+    header.classList.add('header-hidden');
+    console.log("Header ausgeblendet");
+  } else {
+    // Wenn man oberhalb oder genau beim Schwellenwert ist (oberer Teil der Seite)
+    header.classList.remove('header-hidden');
+  }
+});

@@ -17,9 +17,17 @@
 <body>
   <header>
     <nav>
-      <ul>
+      <ul id="header">
         <li><a class="a-header" href="index.html">Home</a></li>
-        <li><a class="a-header" href="projects.html">Projects</a></li>
+        <li id="projects-li"><a class="a-header" href="projects.html">Projects</a>
+          <ul id="dropdown">
+            <li class="dropdowns"><a class="a-header" href="projects.html#minecraft-server">Minecraft Server</a></li>
+            <li class="dropdowns"><a class="a-header" href="projects.html#youtube-downloader">Youtube Downloader</a></li>
+            <li class="dropdowns"><a class="a-header" href="projects.html#j-ai-quikresponse">J-AI QuikResponse</a></li>
+            <li class="dropdowns"><a class="a-header" href="projects.html#j-ai-school-edition">J-AI School Edition</a></li>
+            <li class="dropdowns"><a class="a-header" href="projects.html#multiple-games">Multiple Games</a></li>
+          </ul>
+        </li>
         <li><a class="a-header" href="about.html">About Me</a></li>
         <li><a class="a-header" href="contact.html">Contact</a></li>
         <li><a class="a-header" href="login.html">Log In</a></li>
@@ -37,56 +45,66 @@
       <div>
         <h1>Hey I'm <span>Programmer</span></h1>
         <p>Hey! I'm Jan – a student with a great passion for technology.</p>
-        <a href="">More about me &#8594</a>
+        <a href="about.html">More about me &#8594</a>
       </div>
     </section>
     <section id="projects">
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="img/projects/minecraft-server.jpg" alt="Minecraft Server" class="project-img">
-            <div class="swiper-text">
-              <h1>Minecraft Server</h1>
-              <p>Self-hosted Mincraft Server.<br>
-              Lobby, Bedwars, Arrow Fight and more Minigames at one single Server.<br>
-              Based on Spigot: You don't need to install Mods.</p>
-            </div>
+            <a href="projects.html" class="a-div"><div style="display: flex;">
+              <img src="img/projects/minecraft-server.jpg" alt="Minecraft Server" class="project-img">
+              <div class="swiper-text">
+                <h1>Minecraft Server</h1>
+                <p>Self-hosted Mincraft Server.<br>
+                Lobby, Bedwars, Arrow Fight and more Minigames at one single Server.<br>
+                Based on Spigot: You don't need to install Mods.</p>
+              </div>
+            </div></a>
           </div>
           <div class="swiper-slide">
-            <img src="img/projects/yt-downloader-logo.gif" alt="" class="project-img">
-            <div class="swiper-text">
-              <h1>Youtube Downloader</h1>
-              <p>Simple way to download Youtube video or audio.<br>
-              Available for Windows. Version for Android comming soon...<br>
-              </p>
-            </div>
+            <a href="projects.html" class="a-div"><div style="display: flex;">
+              <img src="img/projects/yt-downloader-logo.gif" alt="" class="project-img">
+              <div class="swiper-text">
+                <h1>Youtube Downloader</h1>
+                <p>Simple way to download Youtube video or audio.<br>
+                Available for Windows. Version for Android comming soon...<br>
+                </p>
+              </div>
+            </div></a>
           </div>
           <div class="swiper-slide">
-            <img src="img/projects/J-AI-Logo.gif" alt="" class="project-img">
-            <div class="swiper-text">
-              <h1>J-AI QuikResponse</h1>
-              <p>Brand new app to ask GPT or other AI assistants for short answers, numbers, dates and more.<br>
-              This app isn't available yet.<br>
-              </p>
-            </div>
+            <a href="projects.html" class="a-div"><div style="display: flex;">
+              <img src="img/projects/J-AI-Logo.gif" alt="" class="project-img">
+              <div class="swiper-text">
+                <h1>J-AI QuikResponse</h1>
+                <p>Brand new app to ask GPT or other AI assistants for short answers, numbers, dates and more.<br>
+                This app isn't available yet.<br>
+                </p>
+              </div>
+            </div></a>
           </div>
           <div class="swiper-slide">
-            <img src="img/projects/J-AI-Logo.gif" alt="" class="project-img">
-            <div class="swiper-text">
-              <h1>J-AI School Edition</h1>
-              <p>Brand new app to simply upluad a screenshot of a worksheet etc. and get the solutions with or without an explanation.<br>
-              This app isn't available yet.<br>
-              </p>
-            </div>
+            <a href="projects.html" class="a-div"><div style="display: flex;">
+              <img src="img/projects/J-AI-Logo.gif" alt="" class="project-img">
+              <div class="swiper-text">
+                <h1>J-AI School Edition</h1>
+                <p>Brand new app to simply upluad a screenshot of a worksheet etc. and get the solutions with or without an explanation.<br>
+                This app isn't available yet.<br>
+                </p>
+              </div>
+            </div></a>
           </div>
           <div class="swiper-slide">
-            <img src="img/projects/godot-game.jpg" alt="" class="project-img">
-            <div class="swiper-text">
-              <h1>Multiple Games</h1>
-              <p>A bunch of games are still in development.<br>
-              2D, 3D, singleplayer, multiplayer, PC and Mobile.<br>
-              For example: Parking game, Platformer, Shooter games, Minigames and much more.</p>
-            </div>
+            <a href="projects.html" class="a-div"><div style="display: flex;">
+              <img src="img/projects/godot-game.jpg" alt="" class="project-img">
+              <div class="swiper-text">
+                <h1>Multiple Games</h1>
+                <p>A bunch of games are still in development.<br>
+                2D, 3D, singleplayer, multiplayer, PC and Mobile.<br>
+                For example: Parking game, Platformer, Shooter games, Minigames and much more.</p>
+              </div>
+            </div></a>
           </div>
         </div>
         <div class="swiper-button-prev"></div>
@@ -95,14 +113,14 @@
       </div>
     </section>
     <section id="contact-me">
-      <div id="main-contact">
+      <a href="contact.html" class="a-div"><div id="main-contact">
         <div id="contact-text">
           <h1>Contact</h1>
           <p>Are you having any problems with my apps or the website? Do you have any suggestions on how I could improve them? Or would you simply like to share something with me?<br>
           If so, please feel free to contact me via the forum.</p>
         </div>
         <img src="img/send-icon.jpg" alt="Contact" id="contact-img">
-      </div>
+      </div></a>
     </section>
   </main>
   <footer>

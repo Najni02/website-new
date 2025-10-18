@@ -20,6 +20,22 @@ a:hover {
     border: black 2px solid;
 }
 
+video {
+    width: 100%;
+}
+.s-link {
+    filter: blur(3px);
+    margin: 0;
+    user-select: none;
+}
+.box {
+    padding: 10px;
+    margin: 10px;
+    border: black 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 .swiper .swiper-button-next .swiper-navigation-icon,
 .swiper .swiper-button-prev .swiper-navigation-icon {
     color: white;

@@ -1,0 +1,53 @@
+.a-header, .a-header:hover {
+color: unset;
+}
+ul {
+    position: unset;
+}
+
+body {
+    background: linear-Gradient(to right, #ff7e5f, #feb47b);
+}
+
+main {
+    min-height: calc(100vh - 170px);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    width: calc(100% - 20px);
+    margin-bottom: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0b7ced;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login {
+    height: 50%;
+    width: 50%;
+    min-height: 400px;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.text {
+    margin: 20px;
+}
