@@ -1,0 +1,24 @@
+.a-header, .a-header:hover {
+    color: unset;
+}
+.a-header:hover, #dropdown {
+    border-color: black;
+}
+
+main {
+    min-height: calc(100vh - 92px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div {
+    border: black 2px solid;
+    border-radius: 20px;
+    padding: 20px 50px 50px 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+p {
+    margin-bottom: 30px;
+}

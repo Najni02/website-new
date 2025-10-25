@@ -1,4 +1,45 @@
-.box {
+#dropdown {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+body {
+    background-image: url(img/img-1.5.jpg);
+}
+ul {
+    position: static;
+    margin-top: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: black 2px solid;
+    border-radius: 20px;
+    background: white;
+}
+video, img {
+    border-radius: 20px;
+    pointer-events: none;
+}
+h1 {
+    font-size: xx-large;
+}
+
+.flex {
     display: flex;
+    gap: 50px;
     
+}
+#minecraft {
+    padding-bottom: 30px;
+}
+.project-img {
+    width: 640px;
+    height: 360px;
+}
+.sec_btn, .sec_btn:hover {
+    background-color: red;
+    border: red 2px solid;
+    color: white;
 }

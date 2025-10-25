@@ -26,19 +26,64 @@ onAuthStateChanged(auth, async (user) => {
 			// Firestore: Lade den String aus einem bestimmten Dokument/Feld
 			const docRef = doc(db, "secure_links", "auth-req_links"); // Passe collectionName und documentId an
 			const docSnap = await getDoc(docRef);
+
 			if (docSnap.exists()) {
-				const value = docSnap.data().ip_address; // Passe fieldName an
+				let value = docSnap.data().ip_address; // Passe fieldName an
                 console.log("Geladener Wert:", value);
 				// Entferne zwei Elemente mit class 'link-error'
 				document.querySelectorAll('.link-error').forEach((el, i) => {
 					if (i < 2) el.remove();
 				});
+
 				// Setze den Wert in das <p>-Element mit id 's-link_1'
-				const p = document.getElementById('s-link_1');
+				let p = document.getElementById('s-link_1');
 				if (p) {
                     p.textContent = value;
                     p.classList.remove('blr-link');
                 };
+
+				const btns = document.querySelectorAll('.sec_btn');
+				btns.forEach(btn => {
+					btn.classList.remove('sec_btn');
+					btn.textContent = "Download";
+				});
+				// Youtube Downloader Link
+				value = docSnap.data().yt_downloader;
+				p = document.getElementById('yt-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
+				// J-AI QuixResponse Link
+				value = docSnap.data().file_hosting;
+				p = document.getElementById('qr-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
+				// J-AI School Edition Link
+				value = docSnap.data().file_hosting;
+				p = document.getElementById('sch-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
+				// Multiple Games Link
+				value = docSnap.data().file_hosting;
+				p = document.getElementById('game-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
+
 
 			} else {
 				console.error("Dokument nicht gefunden!");
