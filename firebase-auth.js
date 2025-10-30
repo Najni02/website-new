@@ -57,7 +57,7 @@ loginBtn.addEventListener("click", () => {
 // });
 
 // 🔄 Auth-Status überwachen
-const authLink = document.getElementById('auth-link');
+const authLink = document.getElementById('login-header');
 onAuthStateChanged(auth, user => {
     if (user) {
       // angemeldet: Link zu Account, optional Anzeige von Name/Avatar
@@ -65,7 +65,7 @@ onAuthStateChanged(auth, user => {
       authLink.textContent = 'Logout';
       // authLink.href = '/account';
       // authLink.insertAdjacentHTML('afterend', '<button id="signout-btn">Abmelden</button>');
-      document.getElementById('auth-link')?.addEventListener('click', () => signOut(auth));
+      document.getElementById('login-header')?.addEventListener('click', () => signOut(auth));
     } else {
       // nicht angemeldet: Login
       console.log("🚫 Kein Benutzer angemeldet");

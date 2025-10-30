@@ -30,7 +30,7 @@
         </li>
         <li><a class="a-header" href="about.html">About Me</a></li>
         <li><a class="a-header" href="contact.html">Contact</a></li>
-        <li><a class="a-header" href="login.html">Log In</a></li>
+        <li><a class="a-header" id="login-header" href="login.html">Log In</a></li>
       </ul>
     </nav>
   </header>
@@ -48,6 +48,12 @@
       <p class="link-error" style="color: red;">You need permissions to See this link.</p>
       <a class="link-error" href="login.html">Please log in or use a permission code.</a>
     </section>
+    <section>
+      <h1>Admin Tools</h1>
+      <div class="toolbox">
+        
+      </div>
+    </section>
     <section id="youtube-downloader">
       <div class="flex">
         <img src="img/projects/yt-downloader-logo.gif" class="project-img">
@@ -57,7 +63,7 @@
           Just insert the Link of the Video you want to download and choose your preferred settings.<br>
           Available formats: MP4, MP3, WEBM<br>
           Available qualities: 144p up to 4K (if available)</p>
-          <a class="sec_btn" id="yt-btn">Download (you need permission: please log in)</a>
+          <a href="login.html" class="sec_btn" id="yt-btn">Download (you need permission: please log in)</a>
         </div>
       </div>
     </section>
@@ -69,7 +75,7 @@
         <p style="margin-bottom: 40px;">J-AI QuikResponse is an AI-powered chatbot designed to provide quick and accurate responses to user inquiries.<br>
         Built using advanced natural language processing techniques, J-AI QuikResponse can understand and interpret a wide range of questions and provide relevant answers in real-time.<br>
         Whether you need help with customer support, information retrieval, or general inquiries, J-AI QuikResponse is here to assist you efficiently and effectively.</p>
-        <a class="sec_btn" id="qr-btn">Download (you need permission: please log in)</a>
+        <a href="login.html" class="sec_btn" id="qr-btn">Download (you need permission: please log in)</a>
         </div>
       </div>
     </section>
@@ -81,7 +87,7 @@
         <p style="margin-bottom: 40px;">J-AI School Edition is an educational platform that leverages artificial intelligence to enhance the learning experience for students.<br>
         This AI-driven tool provides personalized learning paths, adaptive assessments, and interactive content to help students grasp complex concepts more effectively.<br>
         With J-AI School Edition, educators can track student progress, identify areas for improvement, and tailor their teaching strategies to meet individual needs, fostering a more engaging and productive learning environment.</p>
-        <a class="sec_btn" id="sch-btn">Download (you need permission: please log in)</a>
+        <a href="login.html" class="sec_btn" id="sch-btn">Download (you need permission: please log in)</a>
         </div>
       </div>
     </section>
@@ -95,7 +101,7 @@
         Each game features unique mechanics, engaging storylines, and immersive environments designed to captivate players.<br>
         Whether you're looking for a quick casual game or a more in-depth experience, my portfolio showcases a variety of titles that highlight my skills in game development and design.
         </p>
-        <a class="sec_btn" id="game-btn">Download (you need permission: please log in)</a>
+        <a href="login.html" class="sec_btn" id="game-btn">Download (you need permission: please log in)</a>
       </div>
     </section>
   </main>
@@ -104,7 +110,7 @@
   </footer>
 
 
-  <script type="module" src="secure-links.js"></script>
+  <script type="module" src="logged.js"></script>
 
   <script type="module">
     // Import the functions you need from the SDKs you need

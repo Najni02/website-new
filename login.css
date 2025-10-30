@@ -1,16 +1,18 @@
-.a-header, .a-header:hover {
+/*.a-header, .a-header:hover {
     color: unset;
 }
 .a-header:hover, #dropdown {
     border-color: black;
-}
+}*/
 
 ul {
     position: unset;
 }
 
 body {
-    background: linear-Gradient(to right, #ff7e5f, #feb47b);
+    background-image: url(img/img-1.5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
@@ -54,4 +56,5 @@ button {
 }
 .text {
     margin: 20px;
+    color: white;
 }
