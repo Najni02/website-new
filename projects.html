@@ -18,9 +18,14 @@
   <header>
     <nav>
       <ul id="header">
-        <li><a class="a-header" href="index.html">Home</a></li>
+        <li id="home-li"><a class="a-header" href="index.html">Home</a>
+          <ul id="home-dropdown" class="dropdown">
+            <li class="dropdowns"><a class="a-header" href="https://n8n.janamrhein.ch">n8n</a></li>
+            <li class="dropdowns"><a class="a-header disabled">Mc Server Panel</a></li>
+          </ul>
+        </li>
         <li id="projects-li"><a class="a-header" href="projects.html">Projects</a>
-          <ul id="dropdown">
+          <ul id="projects-dropdown" class="dropdown">
             <li class="dropdowns"><a class="a-header" href="projects.html#minecraft-server">Minecraft Server</a></li>
             <li class="dropdowns"><a class="a-header" href="projects.html#youtube-downloader">Youtube Downloader</a></li>
             <li class="dropdowns"><a class="a-header" href="projects.html#j-ai_qr">J-AI QuikResponse</a></li>
@@ -45,13 +50,27 @@
       </p>
       <h3>IP-Address:</h3>
       <div class="box"><p class="s-link blr-link" id="s-link_1">92.9.22.92</p></div>
-      <p class="link-error" style="color: red;">You need permissions to See this link.</p>
-      <a class="link-error" href="login.html">Please log in or use a permission code.</a>
+      <p class="link-error" style="color: red;">Login Required to see this link.</p>
+      <a class="link-error" href="login.html">Log In</a>
     </section>
     <section>
       <h1>Admin Tools</h1>
-      <div class="toolbox">
-        
+      <div id="toolbox">
+        <a href="login.html" id="cpuz-btn" class="a-div"><div class="tool" id="cpuz">
+          <img class="tool-img" src="img/projects/tools/cpu-z.svg" alt="CPUZ">
+          <h2>CPU-Z</h2>
+          <p class="tool-hint">Login Required</p>
+        </div></a>
+        <a href="login.html" id="hwmonitor-btn" class="a-div"><div class="tool" id="hwmonitor">
+          <img class="tool-img" src="img/projects/tools/hwmonitor.svg" alt="HWMonitor">
+          <h2>HWMonitor</h2>
+          <p class="tool-hint">Login Required</p>
+        </div></a>
+        <a href="login.html" id="netscan-btn" class="a-div"><div class="tool" id="netscan">
+          <img class="tool-img" src="img/projects/tools/netscan.svg" alt="NetScan">
+          <h2>NetScan</h2>
+          <p class="tool-hint">Login Required</p>
+        </div></a>
       </div>
     </section>
     <section id="youtube-downloader">
@@ -63,7 +82,7 @@
           Just insert the Link of the Video you want to download and choose your preferred settings.<br>
           Available formats: MP4, MP3, WEBM<br>
           Available qualities: 144p up to 4K (if available)</p>
-          <a href="login.html" class="sec_btn" id="yt-btn">Download (you need permission: please log in)</a>
+          <a href="login.html" class="sec_btn" id="yt-btn">Download (Login Required)</a>
         </div>
       </div>
     </section>
@@ -75,7 +94,7 @@
         <p style="margin-bottom: 40px;">J-AI QuikResponse is an AI-powered chatbot designed to provide quick and accurate responses to user inquiries.<br>
         Built using advanced natural language processing techniques, J-AI QuikResponse can understand and interpret a wide range of questions and provide relevant answers in real-time.<br>
         Whether you need help with customer support, information retrieval, or general inquiries, J-AI QuikResponse is here to assist you efficiently and effectively.</p>
-        <a href="login.html" class="sec_btn" id="qr-btn">Download (you need permission: please log in)</a>
+        <a href="login.html" class="sec_btn" id="qr-btn">Download (Login Required)</a>
         </div>
       </div>
     </section>
@@ -87,7 +106,7 @@
         <p style="margin-bottom: 40px;">J-AI School Edition is an educational platform that leverages artificial intelligence to enhance the learning experience for students.<br>
         This AI-driven tool provides personalized learning paths, adaptive assessments, and interactive content to help students grasp complex concepts more effectively.<br>
         With J-AI School Edition, educators can track student progress, identify areas for improvement, and tailor their teaching strategies to meet individual needs, fostering a more engaging and productive learning environment.</p>
-        <a href="login.html" class="sec_btn" id="sch-btn">Download (you need permission: please log in)</a>
+        <a href="login.html" class="sec_btn" id="sch-btn">Download (Login Required)</a>
         </div>
       </div>
     </section>
@@ -101,7 +120,7 @@
         Each game features unique mechanics, engaging storylines, and immersive environments designed to captivate players.<br>
         Whether you're looking for a quick casual game or a more in-depth experience, my portfolio showcases a variety of titles that highlight my skills in game development and design.
         </p>
-        <a href="login.html" class="sec_btn" id="game-btn">Download (you need permission: please log in)</a>
+        <a href="login.html" class="sec_btn" id="game-btn">Download (Login Required)</a>
       </div>
     </section>
   </main>
@@ -109,8 +128,8 @@
     <p>&copy; 2025 Jan Amrhein. All rights reserved.</p>
   </footer>
 
-
   <script type="module" src="logged.js"></script>
+  <script type="module" src="secure-links.js"></script>
 
   <script type="module">
     // Import the functions you need from the SDKs you need

@@ -18,9 +18,14 @@
   <header>
     <nav>
       <ul id="header">
-        <li><a class="a-header" href="index.html">Home</a></li>
+        <li id="home-li"><a class="a-header" href="index.html">Home</a>
+          <ul id="home-dropdown" class="dropdown">
+            <li class="dropdowns"><a class="a-header" href="https://n8n.janamrhein.ch">n8n</a></li>
+            <li class="dropdowns"><a class="a-header disabled">Mc Server Panel</a></li>
+          </ul>
+        </li>
         <li id="projects-li"><a class="a-header" href="projects.html">Projects</a>
-          <ul id="dropdown">
+          <ul id="projects-dropdown" class="dropdown">
             <li class="dropdowns"><a class="a-header" href="projects.html#minecraft-server">Minecraft Server</a></li>
             <li class="dropdowns"><a class="a-header" href="projects.html#youtube-downloader">Youtube Downloader</a></li>
             <li class="dropdowns"><a class="a-header" href="projects.html#j-ai_qr">J-AI QuikResponse</a></li>

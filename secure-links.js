@@ -34,6 +34,10 @@ onAuthStateChanged(auth, async (user) => {
 				document.querySelectorAll('.link-error').forEach((el, i) => {
 					if (i < 2) el.remove();
 				});
+				document.querySelectorAll('.tool-hint').forEach((el) => {
+					el.textContent = "Direct Download";
+					el.style.color = "green";
+				});
 
 				// Setze den Wert in das <p>-Element mit id 's-link_1'
 				let p = document.getElementById('s-link_1');
@@ -83,6 +87,33 @@ onAuthStateChanged(auth, async (user) => {
 				else {
 					p.href = "get-error.html";
 				}
+				// CPU-Z Link
+				value = docSnap.data().cpuz;
+				p = document.getElementById('cpuz-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
+				// HWMonitor Link
+				value = docSnap.data().hwmonitor;
+				p = document.getElementById('hwmonitor-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
+				// NetScan Link
+				value = docSnap.data().netscan;
+				p = document.getElementById('netscan-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
 
 
 			} else {
@@ -96,3 +127,4 @@ onAuthStateChanged(auth, async (user) => {
 		console.log("Nicht bei Firebase angemeldet.");
 	}
 });
+

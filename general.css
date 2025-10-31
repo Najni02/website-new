@@ -59,3 +59,15 @@ video {
     border-radius: 999px;
     border: black 2px solid;
 }
+
+.disabled {
+    opacity: 0.5;
+}
+
+.a-div, .a-div:hover {
+    color: unset;
+    background-color: unset;
+    border-radius: unset;
+    padding: unset;
+    border: unset;
+}

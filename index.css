@@ -107,10 +107,3 @@ img {
     border-radius: 20px;
 }
 
-.a-div, .a-div:hover {
-    color: unset;
-    background-color: unset;
-    border-radius: unset;
-    padding: unset;
-    border: unset;
-}

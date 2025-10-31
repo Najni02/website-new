@@ -38,8 +38,42 @@ h1 {
     width: 640px;
     height: 360px;
 }
-.sec_btn, .sec_btn:hover {
+.sec_btn {
     background-color: red;
     border: red 2px solid;
     color: white;
+}
+.sec_btn:hover {
+    background-color: white;
+    border: red 2px solid;
+    color: red;
+
+}
+
+#toolbox {
+    padding: 40px;
+    display: flex;
+    gap: 80px;
+}
+.tool {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+}
+.tool:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+.tool-img {
+    width: 100px;
+    height: 100px;
+}
+
+.tool-hint {
+    color: red;
 }

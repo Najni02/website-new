@@ -38,10 +38,10 @@ li {
   transform: translateY(-100%);
 }
 
-#projects-li {
+#projects-li, #home-li {
     position: relative; 
 }
-#dropdown {
+.dropdown {
     display: none;
     position: absolute; /* Nimmt das Element aus dem normalen Fluss */
     margin-top: 10px;
@@ -50,12 +50,19 @@ li {
     min-width: 250px;
     z-index: 1;
 }
-#projects-li:hover #dropdown {
+#projects-li:hover #projects-dropdown {
   display: block; /* Das ist der entscheidende Trick! */
 }
-#dropdown:hover #dropdown {
+#projects-dropdown:hover #projects-dropdown {
   display: block; /* Das ist der entscheidende Trick! */
 }
+#home-li:hover #home-dropdown {
+  display: block; /* Das ist der entscheidende Trick! */
+}
+#home-dropdown:hover #home-dropdown {
+  display: block; /* Das ist der entscheidende Trick! */
+}
+
 .dropdowns {
     margin: 20px auto;
 }
