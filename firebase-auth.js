@@ -33,7 +33,11 @@ setPersistence(auth, browserLocalPersistence);
 // 🔐 Login-Button
 const loginBtn = document.getElementById("login-button");
 loginBtn.addEventListener("click", () => {
-  const email = document.getElementById("email").value;
+  let email = document.getElementById("email").value;
+if (email == "") {
+  email = "otp@janamrhein.ch"; // one-time-password
+}
+
   const password = document.getElementById("password").value;
 
   signInWithEmailAndPassword(auth, email, password)

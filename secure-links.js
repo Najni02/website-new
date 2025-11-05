@@ -14,6 +14,13 @@ const firebaseConfig = {
 	// TODO: Trage hier deine Firebase-Konfigurationsdaten ein
 };
 
+const popup = document.getElementById('yt-popup');
+popup.addEventListener('click', (e) => {
+  // nur schließen, wenn das Event direkt das <dialog> getroffen hat (nicht ein Kind)
+  if (e.target === popup) popup.close();
+});
+
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
@@ -54,8 +61,15 @@ onAuthStateChanged(auth, async (user) => {
 				// Youtube Downloader Link
 				value = docSnap.data().yt_downloader;
 				p = document.getElementById('yt-btn');
-				if (value && p) {
-					p.href = value;
+				const popup_btn = document.getElementById('yt-popup-btn');
+				if (value && p && popup) {
+					p.removeAttribute("href");
+					p.style.cursor = "pointer";
+					p.addEventListener("click", () => {
+						popup.showModal();
+					});
+					popup_btn.href = value;
+					console.log(value);
 				}
 				else {
 					p.href = "get-error.html";

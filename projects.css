@@ -47,8 +47,9 @@ h1 {
     background-color: white;
     border: red 2px solid;
     color: red;
-
 }
+
+
 
 #toolbox {
     padding: 40px;
@@ -76,4 +77,21 @@ h1 {
 
 .tool-hint {
     color: red;
+}
+
+#yt-popup {
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+}
+
+
+.disabled-btn, .disabled-btn:hover {
+    background-color: grey;
+    border: grey 2px solid;
+    color: white;
+    cursor: not-allowed;
+
 }
