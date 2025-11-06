@@ -58,6 +58,15 @@ onAuthStateChanged(auth, async (user) => {
 					btn.classList.remove('sec_btn');
 					btn.textContent = "Download";
 				});
+				// Certificate Link
+				value = docSnap.data().certificate;
+				p = document.getElementById('cer-btn');
+				if (value && p) {
+					p.href = value;
+				}
+				else {
+					p.href = "get-error.html";
+				}
 				// Youtube Downloader Link
 				value = docSnap.data().yt_downloader;
 				p = document.getElementById('yt-btn');
