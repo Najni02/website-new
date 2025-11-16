@@ -89,3 +89,7 @@ video {
   -webkit-text-fill-color: transparent; /* Für Browser-Kompatibilität */
   color: transparent;
 }
+
+.none, .none:hover {
+    all: revert;
+}

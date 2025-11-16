@@ -14,10 +14,15 @@ const firebaseConfig = {
 	// TODO: Trage hier deine Firebase-Konfigurationsdaten ein
 };
 
-const popup = document.getElementById('yt-popup');
-popup.addEventListener('click', (e) => {
+const yt_popup = document.getElementById('yt-popup');
+yt_popup.addEventListener('click', (e) => {
   // nur schließen, wenn das Event direkt das <dialog> getroffen hat (nicht ein Kind)
-  if (e.target === popup) popup.close();
+  if (e.target === yt_popup) yt_popup.close();
+});
+const jai_popup = document.getElementById('jai-popup');
+jai_popup.addEventListener('click', (e) => {
+  // nur schließen, wenn das Event direkt das <dialog> getroffen hat (nicht ein Kind)
+  if (e.target === jai_popup) jai_popup.close();
 });
 
 
@@ -36,7 +41,6 @@ onAuthStateChanged(auth, async (user) => {
 
 			if (docSnap.exists()) {
 				let value = docSnap.data().ip_address; // Passe fieldName an
-                console.log("Geladener Wert:", value);
 				// Entferne zwei Elemente mit class 'link-error'
 				document.querySelectorAll('.link-error').forEach((el, i) => {
 					if (i < 2) el.remove();
@@ -71,30 +75,29 @@ onAuthStateChanged(auth, async (user) => {
 				value = docSnap.data().yt_downloader;
 				p = document.getElementById('yt-btn');
 				const popup_btn = document.getElementById('yt-popup-btn');
-				if (value && p && popup) {
+				if (value && p && yt_popup) {
 					p.removeAttribute("href");
 					p.style.cursor = "pointer";
 					p.addEventListener("click", () => {
-						popup.showModal();
+						yt_popup.showModal();
 					});
 					popup_btn.href = value;
-					console.log(value);
 				}
 				else {
 					p.href = "get-error.html";
 				}
-				// J-AI QuixResponse Link
+				//J-AI Get API Key Link
+				p = document.getElementById('jai-key');
+				p.classList.remove('other_btn');
+				p.textContent = "Get an API-Key";
+				p.removeAttribute("href");
+				p.style.cursor = "pointer";
+				p.addEventListener("click", () => {
+					jai_popup.showModal();
+				});
+				// J-AI Link
 				value = docSnap.data().file_hosting;
-				p = document.getElementById('qr-btn');
-				if (value && p) {
-					p.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-				// J-AI School Edition Link
-				value = docSnap.data().file_hosting;
-				p = document.getElementById('sch-btn');
+				p = document.getElementById('jai-btn');
 				if (value && p) {
 					p.href = value;
 				}

@@ -2,9 +2,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
 import { 
   getAuth, 
-  signInWithEmailAndPassword, 
-  setPersistence, 
-  browserLocalPersistence,
+  createUserWithEmailAndPassword, 
 } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
 
 // 🔧 Firebase-Konfiguration
@@ -23,51 +21,40 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 // ersetze veraltete namespaced API durch modulare Firestore-Nutzung
 
-// 🧷 Persistenz einstellen (angemeldet bleiben)
-setPersistence(auth, browserLocalPersistence);
-
-// 🔐 Login-Button
-const loginBtn = document.getElementById("login-button");
-function login() {
-  let email = document.getElementById("email").value;
-  if (email == "") {
-    email = "otp@janamrhein.ch"; // one-time-password
-  } else if (!email.includes("@")) {
-    email = email + "@janamrhein.ch"; // Benutzername zu E-Mail ergänzen
-  }
+function register() {
+  const email = document.getElementById("email").value;
 
   const password = document.getElementById("password").value;
 
-  signInWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, email, password)
     .then(userCredential => {
       const user = userCredential.user;
-      console.log("Angemeldet als:", user.email);
-      location.href = "index.html";
+      console.log("Konto erstellt für:", user.email);
+      alert(`Konto erstellt für ${user.email}. Bitte jetzt einloggen.`);
+      location.href = "login.html";
     })
     .catch(error => {
       showError(error.message);
-    });
-};
+})};
 
-loginBtn.addEventListener("click", login);
-
-const enterfield = document.getElementById("password");
-enterfield.addEventListener("keyup", function(event) {
-  // Wenn die Taste "Enter" gedrückt wird, klicke auf den Login-Button
-  if (event.key === "Enter") {
-    login();
-  }
-});
+const createBtn = document.getElementById("login-button");
+createBtn.addEventListener('click', register);
 
 function showError(message) {
   const error_p = document.getElementById("error");
   
   switch (message) {
-    case "Firebase: Error (auth/invalid-credential).":
-      message = "Wrong Username or Password.";
+    case "Firebase: Error (auth/invalid-email).":
+      message = "Invalid Username.";
       break;
     case "Firebase: Error (auth/missing-password).":
       message = "Password is missing.";
+      break;
+    case "Firebase: Error (auth/email-already-in-use).":
+      message = "Email already in use.";
+      break;
+    case "Firebase: Password should be at least 6 characters (auth/weak-password).":
+      message = "Password should be at least 6 characters.";
       break;
 
   };

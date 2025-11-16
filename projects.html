@@ -27,9 +27,10 @@
         <li id="projects-li"><a class="a-header" href="projects.html">Projects</a>
           <ul id="projects-dropdown" class="dropdown">
             <li class="dropdowns"><a class="a-header" href="projects.html#minecraft-server">Minecraft Server</a></li>
+            <li class="dropdowns"><a class="a-header" href="projects.html#tools">Admin Tools</a></li>
+            <li class="dropdowns"><a class="a-header" href="projects.html#certificate">Certificate Jan Amrhein</a></li>
             <li class="dropdowns"><a class="a-header" href="projects.html#youtube-downloader">Youtube Downloader</a></li>
-            <li class="dropdowns"><a class="a-header" href="projects.html#j-ai_qr">J-AI QuikResponse</a></li>
-            <li class="dropdowns"><a class="a-header" href="projects.html#j-ai_school">J-AI School Edition</a></li>
+            <li class="dropdowns"><a class="a-header" href="projects.html#j-ai">J-AI</a></li>
             <li class="dropdowns"><a class="a-header" href="projects.html#multiple-games">Multiple Games</a></li>
           </ul>
         </li>
@@ -54,7 +55,7 @@
       <a class="link-error" href="login.html">Log In</a>
     </section>
 
-    <section>
+    <section id="tools">
       <h1>Admin Tools</h1>
       <div id="toolbox">
         <a href="login.html" id="cpuz-btn" class="a-div"><div class="tool" id="cpuz">
@@ -75,7 +76,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="certificate">
       <div class="flex">
         <img src="img/projects/certificate.png" style="height: 320px;">
         <div>
@@ -101,28 +102,17 @@
       </div>
     </section>
 
-    <section id="j-ai_qr">
+    <section id="j-ai">
       <div class="flex">
         <img src="img/projects/J-AI-Logo.gif" class="project-img">
         <div>
-        <h1>J-AI QuikResponse</h1>
-        <p style="margin-bottom: 40px;">J-AI QuikResponse is an AI-powered chatbot designed to provide quick and accurate responses to user inquiries.<br>
-        Built using advanced natural language processing techniques, J-AI QuikResponse can understand and interpret a wide range of questions and provide relevant answers in real-time.<br>
-        Whether you need help with customer support, information retrieval, or general inquiries, J-AI QuikResponse is here to assist you efficiently and effectively.</p>
-        <a href="login.html" class="sec_btn" id="qr-btn">Download (Login Required)</a>
+        <h1>J-AI</h1>
+        <p style="margin-bottom: 40px;">J-AI is a Chatbot running with GPT models <br>
+        Simply take a screenshot or ask a short Question an J-AI will send you the result.</p>
+        <div class="flex">
+          <a href="login.html" class="sec_btn" id="jai-btn">Download (Login Required)</a>
+          <a href="login.html" class="other_btn" id="jai-key">Get an API-Key (Login Required)</a>
         </div>
-      </div>
-    </section>
-
-    <section id="j-ai_school">
-      <div class="flex">
-        <img src="img/projects/J-AI-Logo.gif" class="project-img">
-        <div>
-        <h1>J-AI School Edition</h1>
-        <p style="margin-bottom: 40px;">J-AI School Edition is an educational platform that leverages artificial intelligence to enhance the learning experience for students.<br>
-        This AI-driven tool provides personalized learning paths, adaptive assessments, and interactive content to help students grasp complex concepts more effectively.<br>
-        With J-AI School Edition, educators can track student progress, identify areas for improvement, and tailor their teaching strategies to meet individual needs, fostering a more engaging and productive learning environment.</p>
-        <a href="login.html" class="sec_btn" id="sch-btn">Download (Login Required)</a>
         </div>
       </div>
     </section>
@@ -141,7 +131,7 @@
       </div>
     </section>
 
-    <dialog id="yt-popup">
+    <dialog id="yt-popup" class="popup">
       <h1 style="font-size: x-large;">App Download</h1>
       <p>Your about to download the "Youtube Downloader":<br>
       <span style="color: red;">Attention: This tool may only be used for your own or freely licensed content. Downloading copyrighted material without permission is not allowed.</span><br>
@@ -151,13 +141,21 @@
         <a class="disabled-btn">Windows Portable (Comming soon)</a>
       </div>
     </dialog>
+    <dialog id="jai-popup" class="popup">
+      <h1 style="font-size: x-large;">Get API Key</h1>
+      <p>To use J-AI, you need to get an API key from OpenAI.<br>
+      <span style="color: red;">Important! By ordering an API-Key, you agree to the <a href="agb.html" class="none">terms and conditions.</a></span><br>
+      After that, you can enter the key in the J-AI application to start using it.</p>
+      <a id="order-btn" style="cursor: pointer;">Order now</a>
+    </dialog>
   </main>
   <footer>
     <p>&copy; 2025 Jan Amrhein. All rights reserved.</p>
   </footer>
 
-  <script type="module" src="logged.js"></script>
   <script type="module" src="secure-links.js"></script>
+  <script type="module" src="logged.js"></script>
+  <script type="module" src="order.js"></script>
 
   <script type="module">
     // Import the functions you need from the SDKs you need

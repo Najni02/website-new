@@ -28,7 +28,6 @@ if (!authLink) console.warn("Kein Element mit ID 'login-header' gefunden.");
 
 // Registriere Listener (don't call the unsubscribe immediately)
 onAuthStateChanged(auth, user => {
-  console.log("Auth-Status geändert:");
 
   // If the element is missing, nothing to update in the UI
   if (!authLink) return;

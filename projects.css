@@ -38,12 +38,12 @@ h1 {
     width: 640px;
     height: 360px;
 }
-.sec_btn {
+.sec_btn, .other_btn {
     background-color: red;
     border: red 2px solid;
     color: white;
 }
-.sec_btn:hover {
+.sec_btn:hover, .other_btn:hover {
     background-color: white;
     border: red 2px solid;
     color: red;
@@ -79,7 +79,7 @@ h1 {
     color: red;
 }
 
-#yt-popup {
+.popup {
     border-radius: 20px;
     border: none;
     padding: 20px;
