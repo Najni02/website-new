@@ -30,124 +30,20 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
+function getLink(path, element) {
+
+}
 // Überprüfe, ob der Nutzer angemeldet ist
 onAuthStateChanged(auth, async (user) => {
 	if (user) {
 		// Nutzer ist angemeldet
-		try {
-			// Firestore: Lade den String aus einem bestimmten Dokument/Feld
-			const docRef = doc(db, "secure_links", "auth-req_links"); // Passe collectionName und documentId an
-			const docSnap = await getDoc(docRef);
 
-			if (docSnap.exists()) {
-				let value = docSnap.data().ip_address; // Passe fieldName an
-				// Entferne zwei Elemente mit class 'link-error'
-				document.querySelectorAll('.link-error').forEach((el, i) => {
-					if (i < 2) el.remove();
-				});
-				document.querySelectorAll('.tool-hint').forEach((el) => {
-					el.textContent = "Direct Download";
-					el.style.color = "green";
-				});
-
-				// Setze den Wert in das <p>-Element mit id 's-link_1'
-				let p = document.getElementById('s-link_1');
-				if (p) {
-                    p.textContent = value;
-                    p.classList.remove('blr-link');
-                };
-
-				const btns = document.querySelectorAll('.sec_btn');
-				btns.forEach(btn => {
-					btn.classList.remove('sec_btn');
-					btn.textContent = "Download";
-				});
-				// Certificate Link
-				value = docSnap.data().certificate;
-				p = document.getElementById('cer-btn');
-				if (value && p) {
-					p.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-				// Youtube Downloader Link
-				value = docSnap.data().yt_downloader;
-				p = document.getElementById('yt-btn');
-				const popup_btn = document.getElementById('yt-popup-btn');
-				if (value && p && yt_popup) {
-					p.removeAttribute("href");
-					p.style.cursor = "pointer";
-					p.addEventListener("click", () => {
-						yt_popup.showModal();
-					});
-					popup_btn.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-				//J-AI Get API Key Link
-				p = document.getElementById('jai-key');
-				p.classList.remove('other_btn');
-				p.textContent = "Get an API-Key";
-				p.removeAttribute("href");
-				p.style.cursor = "pointer";
-				p.addEventListener("click", () => {
-					jai_popup.showModal();
-				});
-				// J-AI Link
-				value = docSnap.data().file_hosting;
-				p = document.getElementById('jai-btn');
-				if (value && p) {
-					p.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-				// Multiple Games Link
-				value = docSnap.data().file_hosting;
-				p = document.getElementById('game-btn');
-				if (value && p) {
-					p.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-				// CPU-Z Link
-				value = docSnap.data().cpuz;
-				p = document.getElementById('cpuz-btn');
-				if (value && p) {
-					p.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-				// HWMonitor Link
-				value = docSnap.data().hwmonitor;
-				p = document.getElementById('hwmonitor-btn');
-				if (value && p) {
-					p.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-				// NetScan Link
-				value = docSnap.data().netscan;
-				p = document.getElementById('netscan-btn');
-				if (value && p) {
-					p.href = value;
-				}
-				else {
-					p.href = "get-error.html";
-				}
-
-
-			} else {
-				console.error("Dokument nicht gefunden!");
-			}
-		} catch (err) {
-			console.error("Fehler beim Laden aus Firestore:", err);
-		}
+		// Minecraft
+		const mcPath = await getDoc(doc(db, "links", "auth_links")).data().mc_server;
+		mcValue = mcPath.xxx
+		const mcElement = document.getElementById('s-link_mc');
+		mcElement.textContent = mcPath;
+		mcElement.classList.remove('blr-link');
 	} else {
 		// Nutzer ist nicht angemeldet
 		console.log("Nicht bei Firebase angemeldet.");

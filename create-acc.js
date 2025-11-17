@@ -30,7 +30,7 @@ function register() {
     .then(userCredential => {
       const user = userCredential.user;
       console.log("Konto erstellt für:", user.email);
-      alert(`Konto erstellt für ${user.email}. Bitte jetzt einloggen.`);
+      alert(`Konto erfolgreich erstellt für ${user.email}.`);
       location.href = "login.html";
     })
     .catch(error => {
