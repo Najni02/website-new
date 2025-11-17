@@ -38,7 +38,7 @@ h1 {
     width: 640px;
     height: 360px;
 }
-.sec_btn, .other_btn {
+.sec_btn {
     background-color: red;
     border: red 2px solid;
     color: white;

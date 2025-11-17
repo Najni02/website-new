@@ -30,9 +30,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-function getLink(path, element) {
-
-}
 // Überprüfe, ob der Nutzer angemeldet ist
 onAuthStateChanged(auth, async (user) => {
 	if (user) {
