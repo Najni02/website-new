@@ -10,3 +10,7 @@
     background: white;
     border: black 2px solid;
 }
+
+#text {
+    margin: 100px 50px;
+}
