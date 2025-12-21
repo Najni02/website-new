@@ -42,7 +42,7 @@ async function getLink(elementId, source, path) {
 				element.href = dbValue;
 				if (!element.classList.contains('a-div')) {
 					changeElement(elementId, '');
-					element.textContent = 'Download';
+					element.textContent = element.textContent.replace(" (Login Required)", "");
 				} else {
 					const childText = element.querySelector('.tool-hint');
 					childText.textContent = "Direct Download";
@@ -110,7 +110,8 @@ onAuthStateChanged(auth, async (user) => {
 
 		// Download Links
 		getLink('cer-btn', 'db', ['yt_downloader', 'certificate']);
-		getLink('yt-btn', 'db', ['yt_downloader', 'yt_downloader']);
+		getLink('yt-win-btn', 'db', ['yt_downloader', 'win']);
+		getLink('yt-and-btn', 'db', ['yt_downloader', 'and']);
 		getLink('jai-btn', 'db', ['j-ai', 'app']);
 		getLink('game-btn', 'db', ['games', 'game1']);
 
