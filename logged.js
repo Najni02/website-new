@@ -1,8 +1,8 @@
 // 🔹 Importiere Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
 import { 
-  getAuth, 
-  signOut, 
+  getAuth,
+  signOut,
   onAuthStateChanged 
 } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
 
