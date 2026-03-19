@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body id="body">
   <header>
     <nav>
       <ul id="header">
@@ -132,7 +132,19 @@
     <p>&copy; 2025 Jan Amrhein. All rights reserved.</p>
   </footer>
 
+<script>
+function isMobile() {
+  return /Mobi|Android|iPhone/i.test(navigator.userAgent);
+}
 
+// URL-Parameter prüfen
+const params = new URLSearchParams(window.location.search);
+const allowMobile = params.get("mobile") === "true";
+
+if (isMobile() && !allowMobile) {
+  window.location.href = "mobile.html";
+}
+</script>
   <script src="index.js"></script>
   <script src="prof.js"></script>
   <script type="module" src="logged.js"></script>
