@@ -113,6 +113,7 @@ onAuthStateChanged(auth, async (user) => {
 		getLink('yt-win-btn', 'db', ['yt_downloader', 'win']);
 		getLink('yt-and-btn', 'db', ['yt_downloader', 'and']);
 		getLink('jai-btn', 'db', ['j-ai', 'app']);
+		getLink('jaiq-btn', 'db', ['j-ai', 'quik']);
 		getLink('game-btn', 'db', ['games', 'game1']);
 
 		// Admin Tools
